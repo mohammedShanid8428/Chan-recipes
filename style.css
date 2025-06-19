@@ -1,260 +1,378 @@
-html{
-    min-height: 100vh;
-    background: linear-gradient(180deg, rgb(182, 159, 97), rgb(128, 89, 24));
-}
-body    {
-    display: grid;
-    grid-template-columns: 30% 40% 30%;
-    position: relative;
-    margin: 0px;
-    height: 100vh;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+
+html {
+  min-height: 100vh;
 }
 
-#middle{
-    display: inline-table;
-    text-align: center;
-    position: relative;
-    transform: translateY(-1.7vw);
+body {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  position: relative;
+  margin: 0px;
+  height: 100vh;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom right, #1e1e1e, #3d2b1f);
+  color: #f1f1f1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#middle {
+  display: inline-table;
+  text-align: center;
+  position: relative;
+  transform: translateY(-1.7vw);
 }
 
 #header {
-    position: relative;
+  position: relative;
 }
 
-#title{
-    position: relative;
-    font-family: "Norse";
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    margin-bottom: -5px;
-    font-size: 5vw;
-    text-align: center;
-    color:rgb(236, 218, 139);
-    bottom: 2vw;
-    opacity: 0;
-    animation: intro 2s forwards;
+#title {
+  position: relative;
+  font-family: 'Playfair Display', serif;
+  letter-spacing:2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  margin-bottom: -5px;
+  font-size: 3rem;
+  text-align: center;
+  color: #ffd700;
+  text-shadow: 0 0 5px #ffd700 ;
+  bottom: 2vw;
+  opacity: 0;
+  animation: intro 2s forwards;
 }
 
- #underline  {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    filter: invert(100%);
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-    animation-delay: 2s;
+#underline {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  filter: invert(100%);
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 2s;
 }
 
 
-#gifContainer   {
-    position: relative;
-    display: inline-block;
-    box-sizing: border-box;
-    margin-top: 2em;
-    border: 7px white double;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-    animation-delay: 2.3s;
-    box-shadow: 0 0 2vw black;
+#gifContainer {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-top: 2em;
+  background-color: #111; 
+  border: 7px #ffd700 double;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 2.3s;
+  box-shadow: 0 0 35px rgba(247, 212, 17, 0.2);
+  max-height: 340px;
+  max-width: 95%;
+  border-radius: 12px;
 }
 
- #gif    {
-    margin-bottom: -0.5px;
-    display: block;
-    width: 30vw;
+#gif {
+  margin-bottom: -0.5px;
+  display: block;
+  width: 30vw;
+  max-height: 325px;
+  object-fit: cover;
 }
 
- #descrip{
+#descrip {
   font-size: 1.2vw;
-    margin-top: 0.3em;
-    display: block;
-    text-decoration: none;
-    color: white;
-    /* opacity: 0; */
-    animation: fadeIn 1s forwards;
-    animation-delay: 2.3s;
- }
-
- #descrip:hover{
-  color: rgb(187,187,187);
- }
-
-#descriptionContainer   {
-    position: absolute;
-    border: 0.25vw dotted white;
-    border-radius: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    bottom: 2%;
-    right: 50%;
-    transform: translate(50%);
-    width: 60%;
-    /* opacity: 0; */
-    animation: fadeIn 2s forwards;
-    animation-delay: 2.6s;
-}
-#projectBy  {
-    display: block;
-    color: white;
-    font-size: 1vw;
-    margin-top: 0.5vw;
+  margin-top: 0.3em;
+  display: block;
+  text-decoration: none;
+  color: white;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 2.3s;
 }
 
-#TOP    {
-    margin: 0.5vw 0;
-    width: 17vw;
-    display: block;
-    transform: translateX(1.5%);
-}
-#left  {
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-around;
-    
-}
-#topLeft, #bottomLeft   {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* transition: 0.5s; */
-    /* pointer-events: none; */
-    /* left: -30vw; */
-    position: relative;
-    /* opacity: 0; */
-    animation: leftSlide 2s forwards;
-    animation-delay: 2.8s;
+#descrip:hover {
+  color: rgb(187, 187, 187);
 }
 
-#topLeft:hover, #bottomLeft:hover, #topRight:hover, #bottomRight:hover{
-    transform: scale(1.06);
+#descriptionContainer {
+  position: absolute;
+  border: 0.25vw dotted white;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  bottom: 1%;
+  right: 50%;
+  transform: translate(50%);
+  width: 60%;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  animation-delay: 2.6s;
 }
 
-#topLeftFrame, #bottomLeftFrame, #topRightFrame, #bottomRightFrame {
-    width: 22vw;
-    filter: hue-rotate(0deg) saturate(0);
-    display: block;
-    z-index: 2;
-}
-#topLeft:hover > #topLeftFrame, #bottomLeft:hover > #bottomLeftFrame, #topRight:hover > #topRightFrame, #bottomRight:hover > #bottomRightFrame {
-    transition: 0.75s;
-    filter: hue-rotate(-15deg) saturate(2);
+#projectBy {
+  display: block;
+  color: white;
+  font-size: 1vw;
+  margin-top: 0.5vw;
 }
 
-#topLeftRecipe, #bottomLeftRecipe, #topRightRecipe, #bottomRightRecipe  {
-    position: absolute;
-    width: 18vw;
-    height: 18vw;
-    display: inline;
-    object-fit: cover;
-    pointer-events: auto;
-    box-shadow: 0 0 2vw white;
-}
-#topLeft:hover > #topLeftRecipe, #bottomLeft:hover > #bottomLeftRecipe, #topRight:hover > #topRightRecipe, #bottomRight:hover > #bottomRightRecipe {
-    box-shadow: 0 0 4vw white;
-    transition-duration: 1s;
+#TOP {
+  margin: 0.5vw 0;
+  width: 17vw;
+  display: block;
+  transform: translateX(1.5%);
 }
 
- #topLeftFrame, #bottomLeftFrame, #topRightFrame, #bottomRightFrame{
+#left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+#topLeft,
+#bottomLeft {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  pointer-events: none;
+  left: -30vw;
+  position: relative;
+  opacity: 0;
+  animation: leftSlide 2s forwards;
+  animation-delay: 2.8s;
+}
+
+#topLeft:hover,
+#bottomLeft:hover,
+#topRight:hover,
+#bottomRight:hover {
+  transform: scale(1.06);
+}
+
+#topLeftFrame,
+#bottomLeftFrame,
+#topRightFrame,
+#bottomRightFrame {
+  width: 22vw;
+  filter: hue-rotate(5deg) saturate(0.6) contrast(1.1);
+  display: block;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(255,215,0,0.05);
+  transition: all 0.6s ease;
+}
+
+#topLeft:hover>#topLeftFrame,
+#bottomLeft:hover>#bottomLeftFrame,
+#topRight:hover>#topRightFrame,
+#bottomRight:hover>#bottomRightFrame {
+  transition: 0.75s;
+  filter: hue-rotate(-15deg) saturate(1) contrast(1.4);
+  box-sizing: 0 0 30px rgba(255,215,0,0.4);
+  transform: scale(1.03);
+}
+
+#topLeftRecipe,
+#bottomLeftRecipe,
+#topRightRecipe,
+#bottomRightRecipe {
+  position: absolute;
+  width: 18vw;
+  height: 18vw;
+  display: inline;
+  object-fit: cover;
+  pointer-events: auto;
+  box-shadow: 0 0 3vw white;
+}
+
+#topLeft:hover>#topLeftRecipe,
+#bottomLeft:hover>#bottomLeftRecipe,
+#topRight:hover>#topRightRecipe,
+#bottomRight:hover>#bottomRightRecipe {
+  box-shadow: 0 0 4vw white;
+  transition-duration: 1s;
+}
+
+#topLeftFrame,
+#bottomLeftFrame,
+#topRightFrame,
+#bottomRightFrame {
   width: 22vw;
   display: block;
   z-index: 2;
- }
-
- #topLeftOverlay, #bottomLeftOverlay, #topRightOverlay, #bottomRightOverlay {
-    position: absolute;
-    width: 18vw;
-    height: 18vw;
-    background: rgba(0, 0, 0, 0);
-    color:#ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-family: "Architects_Daughter";
-    /* opacity: 0; */
-    transition: 0.75s;
-    pointer-events: auto;
-    text-decoration: none;
 }
 
-#topLeftOverlay > *, #bottomLeftOverlay > *, #topRightOverlay > *, #bottomRightOverlay > * {
-    transform: translateY(1.5vw);
-    transition: transform 0.5s;
+#topLeftOverlay,
+#bottomLeftOverlay,
+#topRightOverlay,
+#bottomRightOverlay {
+  position: absolute;
+  width: 18vw;
+  height: 18vw;
+  background: rgba(0, 0, 0, 0);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Architects_Daughter";
+  opacity: 0;
+  transition: 0.75s;
+  pointer-events: auto;
+  text-decoration: none;
 }
 
-#topLeftOverlay:hover, #bottomLeftOverlay:hover, #topRightOverlay:hover, #bottomRightOverlay:hover {
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.65);
+#topLeftOverlay>*,
+#bottomLeftOverlay>*,
+#topRightOverlay>*,
+#bottomRightOverlay>* {
+  transform: translateY(1.5vw);
+  transition: transform 0.5s;
+}
+
+#topLeftOverlay:hover,
+#bottomLeftOverlay:hover,
+#topRightOverlay:hover,
+#bottomRightOverlay:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.65);
 
 }
 
-#topLeftOverlay:hover > *, #bottomLeftOverlay:hover > *, #topRightOverlay:hover > *, #bottomRightOverlay:hover > * {
-    transform: translateY(0.5vw);
+#topLeftOverlay:hover>*,
+#bottomLeftOverlay:hover>*,
+#topRightOverlay:hover>*,
+#bottomRightOverlay:hover>* {
+  transform: translateY(0.5vw);
 }
 
-#topLeftTitle, #bottomLeftTitle, #topRightTitle, #bottomRightTitle  {
-    display: block;
-    font-size: 1.6vw;
-    text-decoration: underline;
-    margin-top: 0.4vh;
+#topLeftTitle,
+#bottomLeftTitle,
+#topRightTitle,
+#bottomRightTitle {
+  display: block;
+  font-size: 1.6vw;
+  text-decoration: underline;
+  margin-top: 0.4vh;
 }
 
-#topLeftDescription, #bottomLeftDescription, #topRightDescription, #bottomRightDescription    {
-    font-size: 1vw;
-    text-align: center;
-    margin-top: 1vh;
+#topLeftDescription,
+#bottomLeftDescription,
+#topRightDescription,
+#bottomRightDescription {
+  font-size: 1vw;
+  text-align: center;
+  margin-top: 1vh;
 }
 
-#right   {
-    display: flex; 
-    flex-direction: column;
-    justify-content: space-around;
-    overflow: hidden;
+#right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
 }
 
-#topRight, #bottomRight    {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s;
-    /* pointer-events: none; */
-    /* right: -30vw; */
-    position: relative;
-    /* opacity: 0; */
-    animation: rightSlide 2s forwards;
-    animation-delay: 2.8s;
+#topRight,
+#bottomRight {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  pointer-events: none;
+  right: -30vw;
+  position: relative;
+  opacity: 0;
+  animation: rightSlide 2s forwards;
+  animation-delay: 2.8s;
 }
 
 #shitpost {
-    display: none;
-    position: absolute;
-    width: 4em;
-    height: 1em;
-    pointer-events: auto;
+  display: none;
+  position: absolute;
+  width: 4em;
+  height: 1em;
+  pointer-events: auto;
 }
 
 .chan {
-    position: relative;
-    color: white;
-    background: black;
-    top: 3.6em;
-    width: 15em;
-    opacity: 0;
-    text-align: center;
-    pointer-events: none;
+  position: relative;
+  color: white;
+  background: black;
+  top: 3.6em;
+  width: 15em;
+  opacity: 0;
+  text-align: center;
+  pointer-events: none;
 
 }
 
-@keyframes intro{
-  100%{bottom: 0;}
-  from{opacity: 0;} to {opacity: 1;}
+@keyframes intro {
+  100% {
+    bottom: 0
+  }
+
+  ;
+
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+
+  ;
 }
 
-@keyframes fadeIn{
-  from{opacity: 0;}
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+
+  ;
+}
+
+@keyframes leftSlide {
+  100% {
+    left: 0
+  }
+
+  ;
+
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+
+  ;
+}
+
+@keyframes rightSlide {
+  100% {
+    right: 0
+  }
+
+  ;
+
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+
+  ;
 }
