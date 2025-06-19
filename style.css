@@ -1,5 +1,175 @@
-*{
-  padding: 0;
-  margin: 0;
+
+ html{
+  min-height: 100vh;
+  background: linear-gradient(180deg,rgb(182, 159, 97), rgb(128, 89, 24));
+ }
+
+ body{
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  position: relative;
+  margin: 0px;
+  height: 100vh;
   box-sizing: border-box;
+ }
+
+#middle{
+  display: inline-table;
+  text-align: center;
+  position: relative;
+  transform: translateY(-1.7vw);
+
+ }
+
+ #header{
+  position: relative;
+ }
+
+ #title{
+  position: relative;
+  font-family: "Norse";
+  letter-spacing:0,04rem ;
+  margin-bottom: -5px;
+  font-size: 5vw;
+  text-align: center;
+  color: rgb(236, 218, 139);
+  bottom: 2vw;
+  /* opacity: 0; */
+  /* animation: intro 2s forwards; */
+
+ }
+
+ #underline{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  /* filter: invert(100%); */
+  /* opacity: 0; */
+  /* animation: fade 1s forwards; */
+  /* animation-delay:2s ; */
+
+
+ }
+
+ #gifContainer{
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-top: 2rem;
+  border: 7px white double;
+  box-shadow: 0 0 2vw black;
+
+ }
+
+ #gif{
+  margin-bottom: 1.2vw;
+  display: block;
+  width: 20vw;
+ }
+
+ #descrip{
+  font-size: 1.2vw;
+  margin-top: 0.3rem;
+  display: block;
+  text-decoration: none;
+  color: white;
+ }
+
+ #descrip:hover{
+  color: rgb(187,187,187);
+ }
+
+ #descriptionContainer{
+  position: absolute;
+  border: 0.25vw dotted white;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* bottom: 2%;
+  right: 50%;
+  left: 60%; */
+
+ }
+ #projectBy{
+  display: block;
+  color: white;
+  font-size: 1vw;
+  margin-top: 0.5vw;
+
+ }
+ #left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+ }
+}
+
+ #topLeft,#bottomLeft{
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* left: -30vw; */
+  position: relative;
+ }
+
+ #topLeftRecipe,#bottomLeftRecipe,#topRightRecipe,#bottomRightRecipe{
+  position: absolute;
+  width: 18vw;
+  height: 18vw;
+  display: inline;
+  object-fit: cover;
+  box-shadow: 0 0 2vw white;
+ }
+
+ #topLeftFrame, #bottomLeftFrame, #topRightFrame, #bottomRightFrame{
+  width: 22vw;
+  display: block;
+  z-index: 2;
+ }
+
+ 
+#topLeftoverlay, #bottomLeftOverlay, #topRightOverlay, #bottomRightOverlay {
+  position: absolute;
+  width: 18vw;
+  height: 18vw;
+  background: rgb(0,0,0,0);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+#topLeftTitle, #bottomLeftTitle, #topRightTitle, #bottomRightTitle{
+  display: block;
+  font-size: 1.6vw;
+  text-decoration: underline;
+  margin-top: 0.4vh;
+}
+
+#topLeftDescription, #bottomLeftDescription, #topRightDescription, #bottomRightDescription{
+  font-size: 1vw;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+#right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+
+}
+
+#topRight.#bottomRight{
+  margin: 0,auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
