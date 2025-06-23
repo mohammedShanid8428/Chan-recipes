@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Viewer</title>
+  <link rel="stylesheet" href="./recipes.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Comfortaa&family=Open+Sans:wght@400;600&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <script src="./recipes.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <a class="imageLink" id="recipe-source" href="#" target="_blank">
+      <img class="image" id="recipe-image" src="" alt="Recipe Image" />
+    </a>
+
+    <div class="content">
+      <div class="underline"></div>
+      <h1 class="recipe" id="recipe-title">Recipe Title</h1>
+      <div class="description" id="recipe-description">Recipe description...</div>
+
+      <div class="info">
+        <div class="thymeContainer">
+          <span class="clockContainer">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <path
+                d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1zm0 2a9 9 0 100 18 9 9 0 000-18zm0 3a1 1 0 01.993.883L13 7v4h3a1 1 0 01.117 1.993L16 13h-4a1 1 0 01-.993-.883L11 12V7a1 1 0 011-1z"
+                fill="gold" fill-rule="evenodd"></path>
+            </svg>
+          </span>
+          <div class="thyme" id="prep-time">Prep time</div>
+        </div>
+        <div class="serparator"></div>
+        <div class="servingsContainer">
+          <div class="servings">Servings</div>
+          <div class="servingsAmount" id="servings-count">--</div>
+        </div>
+      </div>
+
+      <div class="ingredientsContainer">
+        <div class="ingredientsDeco"></div>
+        <div class="ingredientsText">Ingredients</div>
+        <div class="ingredientsList">
+          <ul id="ingredients-list"></ul>
+        </div>
+      </div>
+
+      <div class="instructionsContainer">
+        <div class="instructionsDeco"></div>
+        <div class="instructionsText">Instructions</div>
+        <div class="instructionsSteps">
+          <ol id="instructions-list"></ol>
+        </div>
+      </div>
+
+      <div class="nutritionContainer">
+        <div class="nutritionDeco"></div>
+        <div class="nutritionText">Nutrition</div>
+        <div class="nutritionCase">
+          <div class="nutrition1">
+            <ul id="nutrition-col-1"></ul>
+          </div>
+          <div class="nutrition1Info">
+            <ul id="nutrition-col-1-values"></ul>
+          </div>
+          <div class="nutrition2">
+            <ul id="nutrition-col-2"></ul>
+          </div>
+          <div class="nutrition2Info">
+            <ul id="nutrition-col-2-values"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -44,7 +44,7 @@ body {
     position: relative;
     top: 8em;
     width: 45em;
-    height: 120rem;
+    height: 114rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,7 +155,7 @@ body {
     position: absolute;
     box-sizing: border-box;
     border: 0.1em solid white;
-    height: 10%;
+    height: 1%;
 }
 
 .servingsContainer {
@@ -255,8 +255,7 @@ body {
 .nutritionCase {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
+    justify-content: space-around;
     width: 90%;
     height: 100%;
     background: rgba(255, 255, 255, 0.02);
@@ -269,7 +268,7 @@ body {
 }
 
 .nutrition1 {
-    color: #fefefe;
+    
     font-family: 'Comfortaa', cursive;
     list-style-type: none;
     color: lightslategray;
@@ -278,7 +277,7 @@ body {
 }
 
 .nutrition2 {
-    color: #fefefe;
+    color: lightslategray;
     font-size: 0.95rem;
     list-style-type: none;
     font-family: 'Comfortaa', cursive;
@@ -292,7 +291,7 @@ body {
     list-style-type: none;
     font-family: "Amethysta";
     font-size: 0.9em;
-    margin-left: 2.5em;
+    /* margin-left: 2.5em; */
 }
 
 .nutrition1 li,
