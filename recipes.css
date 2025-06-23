@@ -44,7 +44,7 @@ body {
     position: relative;
     top: 8em;
     width: 45em;
-    height: 114rem;
+    min-height: 114rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +60,7 @@ body {
 .content {
     position: absolute;
     width: 99%;
-    height: 99.5%;
+    min-height: 99.5%;
     box-sizing: border-box;
     background: rgb(29, 29, 29);
     border: double 0.2em transparent;
@@ -84,7 +84,7 @@ body {
     transform: translateX(-50%);
     opacity: 0;
     animation: appear 0.9s 1.4s forwards, extend 1s 2.2s forwards;
-    animation-fill-mode: forwards; 
+    animation-fill-mode: forwards;
 }
 
 .recipe {
@@ -101,7 +101,7 @@ body {
     color: #FFCB05;
     opacity: 0;
     animation: recipeAppear 1s 3s forwards;
-    animation-fill-mode: forwards; 
+    animation-fill-mode: forwards;
 }
 
 .description {
@@ -113,13 +113,13 @@ body {
     font-family: 'Architects Daughter', cursive;
     opacity: 0;
     animation: fadeIn 2s 3.5s forwards;
-    animation-fill-mode: forwards; 
-    
+    animation-fill-mode: forwards;
+
 }
 
 .info {
     width: 70%;
-    height: 2.5em;
+    min-height: 2.5em;
     margin: 1em auto 0 auto;
     display: flex;
     align-items: center;
@@ -131,7 +131,7 @@ body {
     color: #FFCB05;
     font-weight: bold;
     box-shadow: 0 2px 10px rgba(255, 203, 5, 0.3);
-     opacity: 0;
+    opacity: 0;
     animation: fadeIn 2s 5.5s forwards;
     animation-fill-mode: forwards;
 }
@@ -208,7 +208,7 @@ body {
     border-right: 1em solid transparent;
     opacity: 0;
     animation: fadeIn 1s 4s forwards, subExtend 1s 4.5s forwards;
-    animation-fill-mode: forwards; 
+    animation-fill-mode: forwards;
 }
 
 .ingredientsText,
@@ -223,7 +223,7 @@ body {
     text-shadow: 1px 1px 2px black;
     opacity: 0;
     animation: fadeIn 1s 5s forwards;
-    animation-fill-mode: forwards; 
+    animation-fill-mode: forwards;
 }
 
 .ingredientsList {
@@ -253,7 +253,7 @@ body {
     margin-top: 1rem;
     opacity: 0;
     animation: fadeIn 2s 5.5s forwards;
-     animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 .ingredientsList li,
@@ -276,11 +276,11 @@ body {
     border-radius: 0.75rem;
     opacity: 0;
     animation: fadeIn 2s 5.5s forwards;
-     animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 .nutrition1 {
-    
+
     font-family: 'Comfortaa', cursive;
     list-style-type: none;
     color: lightslategray;
@@ -433,4 +433,129 @@ body {
     }
 
     ;
+}
+
+@media(max-width:768px) {
+    .container {
+        width: 100%;
+        border-width: 6px;
+    }
+
+    .content {
+        width: 97%;
+        border-width: 2px;
+        top: 4px;
+    }
+
+    .image {
+        position: absolute;
+        width: 7.5em;
+        height: 7.5em;
+        top: 0;
+        margin: 2em auto 0 auto;
+        border-width: 0.4em;
+    }
+
+    .underline {
+        /* position: relative; */
+        margin: 1em auto 1em;
+        width: 70%;
+        height: auto;
+        border-top: 1em solid white;
+        border-bottom: 1em solid white;
+        border-left: 1em solid transparent;
+        border-right: 1em solid transparent;
+        /* display: block; */
+        z-index: 2;
+    }
+
+    .recipe {
+        /* position: relative; */
+        font-size: 1.2rem;
+        /* margin: 1em auto 0.2em auto; */
+        text-align: center;
+        z-index: 3;
+        background-color: transparent;
+        padding: 1.8em 2em;
+        /* display: inline-block; */
+        text-wrap: nowrap;
+    }
+
+    .description {
+        position: relative;
+        width: 95%;
+        margin: 9em auto 0 auto;
+        font-size: 1rem;
+        line-height: 1.6em;
+        padding-top: 1em;
+        z-index: 1;
+    }
+
+    .info {
+        /* width: 90%; */
+        /* flex-direction: column; */
+        /* height: auto; */
+        /* padding: 1em; */
+        font-size: 6px;
+        text-align: center;
+    }
+
+    .thymeContainer {
+        width: 100%;
+        justify-content: center;
+        margin-left: 0;
+
+    }
+
+    .clockContainer {
+        /* position: relative; */
+        width: 15%;
+        margin-bottom: 1em;
+    }
+
+    .servingsContainer {
+        margin-left: 0;
+        margin-top: 1em;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .ingredientsContainer,
+    .instructionsContainer,
+    .nutritionContainer {
+        width: 90%;
+        margin: 2em auto;
+    }
+
+    .ingredientsText,
+    .instructionsText,
+    .nutritionText {
+        font-size: 1.2em;
+        /* top: 0; */
+    }
+
+    .ingredientsList,
+    .instructionsSteps {
+        font-size: 1rem;
+        padding: 1em;
+    }
+
+    .nutritionCase {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    .nutrition1,
+    .nutrition2 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 1em;
+        font-size: 0.95rem;
+    }
+
+    .nutrition1Info,
+    .nutrition2Info {
+        font-size: 1rem;
+    }
+
 }
