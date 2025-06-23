@@ -209,7 +209,6 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 0.9rem;
     width: 90%;
-    padding: 1rem;
     background: rgba(255, 255, 255, 0.03);
     line-height: 1.4em;
     margin-top: 1rem;
@@ -281,7 +280,6 @@ body {
     list-style-type: none;
     font-family: "Amethysta";
     font-size: 0.9em;
-    /* margin-left: 2.5em; */
 }
 
 .nutrition1 li,
