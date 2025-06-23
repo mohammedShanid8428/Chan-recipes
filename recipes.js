@@ -5,7 +5,7 @@ const recipes = [
     description:
       "Chicken Mandi is a traditional Yemeni rice dish made with fragrant basmati rice, slow-cooked spiced chicken, and a smoky, flavorful seasoning blend. This iconic Arab dish has become a regional favorite, especially in Kerala and the Gulf countries. Served with a side of spiced tomato chutney and sometimes mandi soup, it’s both festive and deeply satisfying.",
     image: "resources/mandi.jpeg",
-    source: "https://www.indianhealthyrecipes.com/chicken-mandi/",
+    source: "",
     prepTime: {
       total: "1 hour 15 minutes"
     },
@@ -107,7 +107,7 @@ const recipes = [
     description:
       "A spicy and flavorful mutton curry from Kerala made with roasted coconut, black pepper, and a rich blend of traditional spices. This dish showcases the essence of Kerala cuisine with its deep, earthy flavors and the aroma of curry leaves and coconut oil. The slow-cooked mutton becomes incredibly tender, soaking up the intensely spiced gravy. Often enjoyed with Kerala porotta, appam, or rice, this curry is a festive favorite, perfect for weekend meals or special occasions.",
     image: "resources/mutton.jpeg",
-    source: "https://www.kothiyavunu.com/kerala-mutton-curry/",
+    source: "",
     prepTime: {
       total: "1 hour 20 minutes"
     },
@@ -159,7 +159,7 @@ const recipes = [
     description:
       "Classic Kerala-style beef curry served with flaky, layered porotta. A hearty and spicy combo loved across the region. This rich and deeply spiced curry is slow-cooked with aromatic masalas, caramelized onions, and coconut oil, giving it an intense flavor and dark color. The beef becomes tender and succulent as it simmers in the robust gravy. Paired with buttery, soft Kerala porottas, this dish is a staple at Kerala homes, street-side eateries, and festive occasions.",
     image: "resources/porotta&beef.jpg",
-    source: "https://www.kothiyavunu.com/kerala-beef-curry/",
+    source: "",
     prepTime: {
       total: "1 hour"
     },
