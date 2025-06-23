@@ -1,14 +1,14 @@
-html   {
+html {
     height: 100%;
     margin: 0;
 }
 
-body   {
+body {
     margin: 0;
     background: linear-gradient(180deg, rgb(182, 159, 97), rgb(128, 89, 24)) fixed;
     height: 100%;
     overflow-anchor: none;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .imageLink {
@@ -37,22 +37,23 @@ body   {
 .image:hover {
     height: 11.5em;
     width: 11.5em;
+    box-shadow: 0 0 25px #ffcb;
 }
 
-.container  {
+.container {
     position: relative;
     top: 8em;
     width: 45em;
-    height: 115em;
+    height: 120rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.5em double white;
+    border: 0.5em double #a15c1a;
     margin: 0 auto;
     box-sizing: border-box;
-    border-radius: 1em;
-    background: #222;
-    border-color: #FFCB05
+    border-radius: 1.5rem;
+    background: rgba(10, 10, 10, 0.75);
+    box-shadow: 0 0 25px rgba(255, 203, 5, 0.2), 0 0 60px rgba(0, 0, 0, 0.6);
 
 }
 
@@ -65,18 +66,20 @@ body   {
     border: double 0.2em transparent;
     border-radius: 0.5em;
     background-image: linear-gradient(#1a1a1a, #1a1a1a),
-                      linear-gradient(to bottom, #ffcb05, #ff9100);
+        linear-gradient(to bottom, #ffcb05, #ff9100);
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
 
-.underline  {
+.underline {
     position: absolute;
-    border-top: 1.4em solid white;
-    border-bottom: 1.4em solid white;
-    border-left: 1.4em solid transparent;
-    border-right: 1.4em solid transparent;
-    margin-top: 0em;
+    border-top: 1.6em solid white;
+    border-bottom: 1.6em solid white;
+    border-left: 1.6em solid transparent;
+    border-right: 1.6em solid transparent;
+    background: linear-gradient(to right, #fff, #eee);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 0rem;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
@@ -87,25 +90,25 @@ body   {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 1.5em;
-    font-size: 2.2em;
+    margin-top: 0;
+    font-size: 2rem;
     letter-spacing: 1px;
-    color: green;
+    color: #ffd700;
     font-family: 'Architects Daughter', cursive;
     font-weight: normal;
-    text-shadow: 1px 1px 2px black;color: #FFCB05;
-    
+    text-shadow: 1px 1px 2px black;
+    color: #FFCB05;
     opacity: 0;
     animation: recipeAppear 1s 3s forwards;
 }
 
 .description {
-    
+
     position: relative;
     color: white;
     width: 90%;
     margin: 10em auto 0 auto;
-    font-family: "Amethysta";
+    font-family: 'Architects Daughter', cursive;
     opacity: 0;
     animation: fadeIn 2s 3.5s forwards;
 }
@@ -119,6 +122,11 @@ body   {
     justify-content: space-evenly;
     border: 0.25em double #ffcb05;
     border-radius: 2em;
+    background: #1e1e1e;
+    padding: 0.6rem 1.5rem;
+    color: #FFCB05;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(255, 203, 5, 0.3);
 }
 
 .thymeContainer {
@@ -155,7 +163,7 @@ body   {
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
-    width: 6.6em;    
+    width: 6.6em;
     margin-left: 5em;
 }
 
@@ -171,7 +179,9 @@ body   {
 
 }
 
-.ingredientsContainer, .instructionsContainer, .nutritionContainer {
+.ingredientsContainer,
+.instructionsContainer,
+.nutritionContainer {
     position: relative;
     display: flex;
     justify-content: center;
@@ -179,21 +189,27 @@ body   {
     flex-direction: column;
     margin-top: 3em;
 }
-.ingredientsDeco, .instructionsDeco, .nutritionDeco {
+
+.ingredientsDeco,
+.instructionsDeco,
+.nutritionDeco {
     top: 0;
     height: 0;
-    border-top: 0.8em solid white;
-    border-bottom: 0.8em solid white;
-    border-left: 0.8em solid transparent;
-    border-right: 0.8em solid transparent;
+    border-top: 1em solid #FFCB05;
+    border-bottom: 1em solid #FFCB05;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
     opacity: 0;
     animation: fadeIn 1s 4s forwards, subExtend 1s 4.5s forwards;
 }
 
-.ingredientsText, .instructionsText, .nutritionText {
+.ingredientsText,
+.instructionsText,
+.nutritionText {
     position: absolute;
     font-size: 1.6em;
-    font-family: 'Architects Daughter', cursive;;
+    font-family: 'Architects Daughter', cursive;
+    ;
     top: -0.15em;
     color: #FFDE59;
     text-shadow: 1px 1px 2px black;
@@ -202,57 +218,76 @@ body   {
 }
 
 .ingredientsList {
-    color: #fefefe;
-
+    color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
     width: 90%;
-    font-family: "Amethysta";
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
     line-height: 1.4em;
-    margin-top: 0.5em;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    border-left: 3px solid #FFCB05;
     opacity: 0;
     animation: fadeIn 2s 5.5s forwards;
 }
 
 .instructionsSteps {
-    color: #fefefe;
-
+    color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
     width: 90%;
-    font-family: "Amethysta";
-    margin-top: 1em;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 0.5rem;
+    border-left: 3px solid #FFCB05;
+    margin-top: 1rem;
     opacity: 0;
     animation: fadeIn 2s 5.5s forwards;
 }
 
+.ingredientsList li,
 .instructionsSteps li {
-    margin-bottom: 1.5em;
+    margin-bottom: 0.8rem;
+    padding-left: 1rem;
+    position: relative;
 }
 
 .nutritionCase {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 80%;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 90%;
     height: 100%;
-    margin: 2em 2em 0 0;
+    background: rgba(255, 255, 255, 0.02);
+    margin: 2em 1em 0 1em;
+    border: 1px solid #ffcb05;
+    padding: 1rem;
+    border-radius: 0.75rem;
     opacity: 0;
     animation: fadeIn 2s 5.5s forwards;
 }
 
 .nutrition1 {
     color: #fefefe;
-
+    font-family: 'Comfortaa', cursive;
     list-style-type: none;
     color: lightslategray;
-    font-family: "Comfortaa";
+    font-size: 0.95rem;
+    width: 45%;
 }
 
 .nutrition2 {
     color: #fefefe;
-
+    font-size: 0.95rem;
     list-style-type: none;
-    font-family: "Comfortaa";
+    font-family: 'Comfortaa', cursive;
     margin-left: 8em;
+    width: 45%;
 }
-.nutrition1Info, .nutrition2Info {
+
+.nutrition1Info,
+.nutrition2Info {
     color: white;
     list-style-type: none;
     font-family: "Amethysta";
@@ -260,40 +295,131 @@ body   {
     margin-left: 2.5em;
 }
 
-.nutrition1 li, .nutrition2 li {
+.nutrition1 li,
+.nutrition2 li {
     margin-bottom: 0.67em;
 }
 
-.nutrition1Info li, .nutrition2Info li {
+.nutrition1Info li,
+.nutrition2Info li {
     margin-bottom: 0.75em;
 }
 
 @keyframes expand {
-    from {transform: scale(0.01)} to {transform: scale(1)};
+    from {
+        transform: scale(0.01)
+    }
+
+    to {
+        transform: scale(1)
+    }
+
+    ;
 }
+
 @keyframes Down {
-    100% {top: 19em};
+    100% {
+        top: 19em
+    }
+
+    ;
 }
+
 @keyframes Up {
-    100% {top: -7em};
-    from {box-shadow: 0 0 0px black} to {box-shadow: 0 0 2.5em black};
+    100% {
+        top: -7em
+    }
+
+    ;
+
+    from {
+        box-shadow: 0 0 0px black
+    }
+
+    to {
+        box-shadow: 0 0 2.5em black
+    }
+
+    ;
 }
+
 @keyframes appear {
-    from {opacity: 0} to {opacity: 1};
-    from {margin-top: 0em} to {margin-top: 6em};
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+
+    ;
+
+    from {
+        margin-top: 0em
+    }
+
+    to {
+        margin-top: 6em
+    }
+
+    ;
 
 }
+
 @keyframes extend {
-    from {width: 0%} to {width: 70%};
-}
-@keyframes subExtend{
-    from  {width: 0%} to {width: 50%};
-}
-@keyframes recipeAppear{
-    from {margin-top: 1.5em} to {margin-top: 3.2em};
-    from {opacity: 0} to {opacity: 1};
-}
-@keyframes fadeIn {
-    from {opacity: 0} to {opacity: 1};
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 70%
+    }
+
+    ;
 }
 
+@keyframes subExtend {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 50%
+    }
+
+    ;
+}
+
+@keyframes recipeAppear {
+    from {
+        margin-top: 1.5em
+    }
+
+    to {
+        margin-top: 3.2em
+    }
+
+    ;
+
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+
+    ;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+
+    ;
+}
