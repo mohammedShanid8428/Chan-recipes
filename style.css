@@ -181,6 +181,8 @@ body {
 #topRightRecipe,
 #bottomRightRecipe {
   position: absolute;
+  left: 26px;
+  top: 26px;
   width: 18vw;
   height: 18vw;
   display: inline;
@@ -417,6 +419,9 @@ body {
     justify-content: center;
     order: 3;
   }
+  #left a {
+    width: 100%;
+  }
 
   #topLeft, #bottomLeft,
   #topRight, #bottomRight {
@@ -441,9 +446,9 @@ body {
   #bottomLeftRecipe,
   #topRightRecipe,
   #bottomRightRecipe{
+    left: 23px;
     width: 70vw;
     height: 70vw;
-    max-width: 100%;
   }
 
   #topLeftTitle,
