@@ -54,7 +54,6 @@ body {
   animation-delay: 2s;
 }
 
-
 #gifContainer {
   position: relative;
   display: inline-block;
@@ -183,7 +182,7 @@ body {
   position: absolute;
   left: 26px;
   top: 26px;
-  width: 18vw;
+  width: 18.3vw;
   height: 18vw;
   display: inline;
   object-fit: cover;
@@ -316,67 +315,46 @@ body {
 @keyframes intro {
   100% {
     bottom: 0
-  }
-
-  ;
-
+  };
   from {
     opacity: 0
   }
-
   to {
     opacity: 1
-  }
-
-  ;
+  };
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0
   }
-
   to {
     opacity: 1
-  }
-
-  ;
+  };
 }
 
 @keyframes leftSlide {
   100% {
     left: 0
-  }
-
-  ;
-
+  };
   from {
     opacity: 0
   }
-
   to {
     opacity: 1
-  }
-
-  ;
+  };
 }
 
 @keyframes rightSlide {
   100% {
     right: 0
-  }
-
-  ;
-
+  };
   from {
     opacity: 0
   }
-
   to {
     opacity: 1
-  }
-
-  ;
+  };
 }
 
 @media (max-width: 768px) {
